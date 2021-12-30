@@ -115,8 +115,8 @@
 		<table width="625">
 			<tr>
 		       <td>
-			       <font size="2">Surat keterangan ini diminta oleh bersangkutan untuk keperluan <br><br>
-					   Demikian surat keterangan ini dibuat dengan sebenarnya, kepadayang bersangkutan untuk dapat digunakan seperlunya.
+			       <font size="2">Surat keterangan ini diminta oleh bersangkutan untuk keperluan <b><u>{{ $data->letter_interests }}</u></b> <br><br>
+					   Demikian surat keterangan ini dibuat dengan sebenarnya, kepada yang bersangkutan untuk dapat digunakan seperlunya.
 </font>
 		       </td>
 		    </tr>

@@ -117,7 +117,7 @@
 		       <td>
 			       <font size="2">Benar bahwa nama tersebut diatas adalah warga Desa Kali Sari Kecamatan 
 					   Natar Kabupaten Lampung Selatan<br><br>
-					   Demikian surat keterangan ini dibuat dengan sebenarnya, kepadayang bersangkutan untuk dapat digunakan seperlunya.
+					   Demikian surat keterangan ini dibuat dengan sebenarnya, kepada yang bersangkutan untuk dapat digunakan seperlunya.
 </font>
 		       </td>
 		    </tr>
