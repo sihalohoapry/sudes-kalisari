@@ -47,8 +47,13 @@
         <!-- /.content-wrapper -->
 
         <footer class="main-footer">
+        <div class="col-12 text-center">
             <strong>Copyright &copy; 2021 Sudes Kalisari</strong>
             All rights reserved.
+        </div>
+        <div class="col-12 text-center">
+            <p >Kontak Person <span class="text-dark">0812-0000-1111</span></p>
+        </div>
         </footer>
     </div>
     <!-- ./wrapper -->

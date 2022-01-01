@@ -48,11 +48,25 @@ class SuratMenikahController extends Controller
                 return DataTables::of($model)
                 ->addColumn('action', function ( $item) {
                     return '
-                    <div >
-                    <a class="btn btn-primary  mr-1 mb-1" href="' . route('surat-menikah.edit', $item->id) . '">
-                        Lihat
-                    </a>
-                </div>';
+                    <div class="btn-group">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle mr-1 mb-1" 
+                                    type="button" id="action' .  $item->id . '"
+                                        data-toggle="dropdown" 
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Aksi
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="action' .  $item->id . '">
+                                    <a class="dropdown-item" href="' . route('surat-menikah.edit', $item->id) . '">
+                                        Sunting
+                                    </a>
+                                    <a class="dropdown-item" href="' . route('surat-menikah.show', $item->id) . '">
+                                        Cetak
+                                    </a>
+                                </div>
+                            </div>
+                    </div>';
                 })
                 ->toJson();
         }
@@ -102,7 +116,10 @@ class SuratMenikahController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = MarriageCertificate::findOrFail($id);
+        return view('pages.admin.cetak-surat-telah-menikah',[
+            'data'=>$data,
+        ]);
     }
 
     /**

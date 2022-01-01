@@ -39,12 +39,9 @@ class SuratIzinUsahaController extends Controller
                                     <a class="dropdown-item" href="' . route('surat-izin-usaha.edit', $item->id) . '">
                                         Sunting
                                     </a>
-                                    <form action="' . route('surat-izin-usaha.destroy', $item->id) . '" method="POST">
-                                        ' . method_field('delete') . csrf_field() . '
-                                        <button type="submit" class="dropdown-item text-danger">
-                                            Hapus
-                                        </button>
-                                    </form>
+                                    <a class="dropdown-item" href="' . route('surat-izin-usaha.show', $item->id) . '">
+                                        Cetak
+                                    </a>
                                 </div>
                             </div>
                     </div>';
@@ -90,7 +87,10 @@ class SuratIzinUsahaController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Businesslicense::findOrFail($id);
+        return view('pages.admin.cetak-surat-usaha',[
+            'data' =>$data,
+        ]);
     }
 
     /**
